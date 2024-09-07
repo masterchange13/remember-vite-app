@@ -13,7 +13,8 @@ function createWindow() {
       nodeIntegration: false,
     },
   });
-  mainWindow.loadURL('https://www.baidu.com');
+  // mainWindow.loadURL('https://www.baidu.com');
+  mainWindow.loadURL('http://localhost:5173/')
   // mainWindow.loadFile('index.html');
 }
 

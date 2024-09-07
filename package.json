@@ -7,14 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "electron ."
+    "electron": "wait-on http://localhost:5173 && electron .",
+    "start": "concurrently \"npm run dev\" \"npm run electron\""
   },
   "dependencies": {
     "vue": "^3.4.29"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
-    "vite": "^5.3.1"
+    "concurrently": "^8.2.2",
+    "electron": "^32.0.2",
+    "vite": "^5.3.1",
+    "wait-on": "^8.0.0"
   },
   "build": {
     "appId": "com.example.myvueapp",
@@ -37,5 +41,4 @@
       ]
     }
   }
-  
 }
